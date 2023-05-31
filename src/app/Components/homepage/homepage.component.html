@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row" *ngFor="let restaurant of restaurants">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body" >
+                <img src="{{ menu.image }}" alt="{{ menu.itemname }}" class="img" />
+              <h5 class="card-title">{{ .itemname }}</h5>
+              <p class="card-text"> {{ restaurant.itemname }} - ${{ menu.item_Price }}</p>
+              <button class="btn btn-primary" (click)="addToCheckout(menu)">Add</button>
+            </div>
+           
+          </div>
+         
+        </div>
+        
+      </div>
+    </div>
+    
+    <div><h1>Number of items added to Check Out : {{number}}</h1>
+        <a class="btn btn-primary"  routerLink="/menu/checkout">Proceed</a>
+    </div>
